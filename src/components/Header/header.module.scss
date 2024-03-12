@@ -1,0 +1,66 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-sizing: border-box;
+  margin-top: 48px;
+  padding-bottom: 25px;
+  width: 100%;
+  border-bottom: 1px solid #CBCBCB;
+
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 112px;
+    height: 43px;
+    margin-right: 103px;
+  }
+  a,
+  button {
+    color: #606060;
+    cursor: pointer;
+  }
+  &__menu {
+    display: flex;
+    gap: 54px;
+    &_item {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      a {
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    white-space: nowrap;
+    button {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 27px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    li {
+      height: 100%;
+      padding: 18px 27px;
+    }
+    &_login {
+    }
+    &_singup {
+      background-color: #6c5fbc;
+      border-radius: 18px;
+      button {
+        color: #f9f9f9;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+@import './variables';
+@import './libs/normalize';
+
+#root {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+}
+
+body {
+  background-color: $background;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+  text-align: center;
+  // border: 1px solid #a9a9a9;
+}
+
