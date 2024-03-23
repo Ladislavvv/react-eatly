@@ -45,9 +45,9 @@ function AccordionBlock() {
             <li onClick={() => handleClick(index)} key={index} className="accordion__list-item">
               <div className="accordion-header">
                 <h3>{item.title}</h3>
-                <button></button>
+                <button className={activeIndex === index ? 'open' : ''}></button>
               </div>
-              <div className={`accordion-content ${activeIndex === index ? 'active' : ''}`}>
+              <div className={`accordion-content ${activeIndex === index ? 'open' : ''}`}>
                 <p>{item.content}</p>
               </div>
             </li>

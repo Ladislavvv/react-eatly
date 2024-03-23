@@ -918,17 +918,7 @@ body {
             position: relative;
             cursor: pointer;
 
-            &::after {
-              content: '';
-              position: absolute;
-              width: 10.6px;
-              height: 1.15px;
-              background-color: #fff;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-            }
-
+            &::after,
             &::before {
               content: '';
               position: absolute;
@@ -937,7 +927,20 @@ body {
               background-color: #fff;
               top: 50%;
               left: 50%;
+              transform: translate(-50%, -50%);
+              transition: transform 0.3s ease;
+            }
+
+            &::before {
               transform: translate(-50%, -50%) rotate(90deg);
+            }
+
+            &.open::after {
+              transform: translate(-50%, -50%) rotate(180deg);
+            }
+
+            &.open::before {
+              transform: translate(-50%, -50%) rotate(0deg);
             }
           }
         }
@@ -953,7 +956,7 @@ body {
           transition: all 0.2s ease-in-out;
         }
 
-        .accordion-content.active {
+        .accordion-content.open {
           padding: 13px;
           max-height: 55px;
         }
