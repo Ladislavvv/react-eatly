@@ -946,10 +946,16 @@ body {
           font-family: 'Poppins', serif;
           text-align: left;
           color: #686868;
-          padding: 13px;
+          padding: 0px;
+          padding-left: 13px;
           max-height: 0;
-          // overflow: hidden;
-          transition: max-height 0.3s ease-in-out;
+          overflow: hidden;
+          transition: all 0.2s ease-in-out;
+        }
+
+        .accordion-content.active {
+          padding: 13px;
+          max-height: 55px;
         }
       }
     }

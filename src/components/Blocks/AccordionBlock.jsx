@@ -29,7 +29,7 @@ function AccordionBlock() {
     },
   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState();
 
   const handleClick = (index) => {
     setActiveIndex(index === activeIndex ? null : index);
@@ -47,11 +47,9 @@ function AccordionBlock() {
                 <h3>{item.title}</h3>
                 <button></button>
               </div>
-              {activeIndex === index && (
-                <div className="accordion-content" style={{maxHeight: activeIndex === index ? '100%' : '0',}}>
-                  <p>{item.content}</p>
-                </div>
-              )}
+              <div className={`accordion-content ${activeIndex === index ? 'active' : ''}`}>
+                <p>{item.content}</p>
+              </div>
             </li>
           );
         })}
