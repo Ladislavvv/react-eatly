@@ -1,6 +1,6 @@
 import React from 'react';
 
-function getHighlight( props) {
+function getHighlight(props) {
   const highlights = {
     Healthy: 'card-highlight-yellow',
     Trending: 'card-highlight-red',

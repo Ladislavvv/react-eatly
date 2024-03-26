@@ -3,13 +3,13 @@ import { RestaurantsList } from '../../App';
 
 function RestaurantBannerBlock({ id }) {
   const restaurants = useContext(RestaurantsList);
-  const { timeToCook, rating } = restaurants.find((el) => el.id === id);
+  const { timeToCook, rating, title } = restaurants.find((el) => el.id === id);
   return (
     <div className="single-restaurant__banner">
       <img src="/img/single-restaurant.png" alt="Chiken" />
       <ul>
         <li>
-          <h2>The Chicken King (id:{id})</h2>
+          <h2>{title} (id:{id})</h2>
         </li>
         <li className="single-banner-item">
           <p>{timeToCook}min •</p>

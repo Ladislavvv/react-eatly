@@ -2,7 +2,8 @@ import React from 'react';
 import getHighlight from './getHighlight';
 import { Link } from 'react-router-dom';
 
-function RestaurantCard({ id, img, title, highlight, timeToCook, rating }) {
+function RestaurantCard(props) {
+  const { id, img, title, highlight, timeToCook, rating } = {...props}
   return (
     <li className="restaurants__section_list-item restaurant__card">
       <Link to={`/menu/restaurant/${id}`}>

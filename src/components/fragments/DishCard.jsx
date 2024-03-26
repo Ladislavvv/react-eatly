@@ -1,11 +1,11 @@
 import React from 'react';
 import getHighlight from './getHighlight';
 
-function Dish({ title, imgUrl, imgAlt, highlight, timeToCook, rating, price }) {
+function Dish({ title, img, highlight, timeToCook, rating, price }) {
   return (
     <li className="dishes__list-item food-card">
       <button className="favourite-btn"></button>
-      <img className="card-img" src={imgUrl} alt={imgAlt} />
+      <img className="card-img" src={img.url} alt={img.alt} />
       <div className="card-info">
         {getHighlight(highlight)}
         <h3 className="card-info-title">{title}</h3>

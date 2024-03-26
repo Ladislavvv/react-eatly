@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import './scss/App.scss';
 
 import Header from './components/Blocks/Header';
@@ -13,11 +14,29 @@ import Blog from './pages/Blog';
 import Menu from './pages/Menu';
 import Pricing from './pages/Pricing';
 import RestaurantPage from './pages/RestaurantPage';
+import AllDishes from './pages/AllDishes';
 
 export const RestaurantsList = React.createContext();
 export const DishesList = React.createContext();
 
 function App() {
+  const [items, SetItems] = React.useState([])
+
+  const fetchRestaurants = () => {
+    axios.get(`https://65cd2149dd519126b8402996.mockapi.io/restaurants`).then(res => {
+      SetItems(res.data);
+    }).catch(error => {
+      console.log('There has been a problem with your axios get operation:', error);
+    })
+  }
+
+  React.useEffect(() => {
+    window.scrollTo(0,0);
+    fetchRestaurants();
+  }, [])
+
+  // console.log(items)
+
   const restaurants = [
     {
       id: 0,
@@ -123,7 +142,7 @@ function App() {
   ];
 
   return (
-    <RestaurantsList.Provider value={restaurants}>
+    <RestaurantsList.Provider value={items}>
       <DishesList.Provider value={dishes}>
         <div className="App">
           <div className="wrapper">
@@ -136,6 +155,7 @@ function App() {
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path='/alldishes' element={<AllDishes/>} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </div>

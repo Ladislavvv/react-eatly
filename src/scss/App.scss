@@ -53,7 +53,7 @@ body {
 }
 // Food card
 .food-card {
-  padding: 35px 25px 30px 15px;
+  padding: 35px 20px 30px 15px;
   position: relative;
   min-width: 225px;
 
@@ -502,11 +502,11 @@ body {
     margin-bottom: 150px;
 
     &_list {
-      // display: flex;
-      // gap: 30px;
-      // margin-bottom: 65px;
+      .card-img{
+        width: 396px;
+        height: 177px;
+      }
     }
-
     &_list-item {
     }
   }
@@ -534,38 +534,6 @@ body {
       // padding-bottom: 18px;
       padding: 0 33px 18px;
     }
-
-    // &_info-highlight {
-    //   font-family: 'Poppins', sans-serif;
-    //   font-size: 13px;
-    //   color: #daa31a;
-
-    //   padding: 3px 8px;
-    //   border-radius: 6px;
-    //   background-color: #f7edd0;
-    // }
-
-    // &_info-title {
-    //   font-family: 'Poppins', sans-serif;
-    //   font-size: 27px;
-    //   font-weight: 600;
-    //   line-height: 42px;
-    //   color: #323142;
-    // }
-
-    // &_info_list {
-    //   display: flex;
-    //   align-items: center;
-
-    //   .info_list-item {
-    //     font-family: 'Manrope', sans-serif;
-    //     font-size: 20px;
-    //     line-height: 26px;
-    //     color: #8e97a6;
-    //     display: flex;
-    //     align-items: center;
-    //   }
-    // }
   }
 }
 
